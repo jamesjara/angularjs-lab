@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+<body > 
+
+    <div  ng-app="" ng-init="pets = [{name:'shell'}]">
+       <p>Enter your dog name: <input type = "text" ng-model="name"></p>
+       {{ name }}
+	   <ol>
+	      <li ng-repeat = "pet in pets">
+	         {{ pet.name }}
+	      </li>
+	   </ol>
+    </div>
+    
+    <script> 
+    
+    
+    </script>
+</body>
+</html>

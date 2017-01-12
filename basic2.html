@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+<body ng-app="dogsApp">
+
+    <div ng-controller="headController">
+         {{ general.title }}
+    </div>
+
+    <div ng-controller="bodyController">
+         {{ content }}
+    </div>
+    
+    <script>
+    angular.module("dogsApp", [])
+    
+    .controller("headController", function($scope){
+        $scope.general = {};
+        $scope.general.title = "head for app";
+    })
+    
+    .controller("bodyController", function($scope){ 
+        $scope.content = "content";
+    });
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body > 
+    <div ng-controller="petsController">
+    petsController {{ type }}
+    <input type="text" ng-model="type">
+    </div>
+    
+    <div ng-controller="catsController">
+    catsController {{ type }}
+    <input type="text" ng-model="type">
+    </div>
+    
+    <div ng-controller="catsController">
+    <hr> 
+    we have a overidden inside a cat
+    catsController {{ type }}
+    <input type="text" ng-model="type">
+   
+       
+        we have a overidden inside a cat , so gets shown as overriden no as a cat
+	    <div ng-controller="overriddenController">
+	    overriddenController {{ type }}
+	    <input type="text" ng-model="type">
+	    </div>
+    </div>
+    
+
+    <script>
+    var mainApp = angular.module('mainApp', []);
+
+    mainApp.controller('petsController', function($scope){
+        
+        // type is a model 
+        $scope.type = 'pet';
+    });
+
+    mainApp.controller('catsController', function($scope){
+        
+        // type is a model 
+        $scope.type = 'cat';
+    });
+
+    mainApp.controller('overriddenController', function($scope){
+        
+        // type is a model 
+        $scope.type = 'overriden';
+    });
+
+    </script>
+</body>
+</html>

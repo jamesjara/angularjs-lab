@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body > 
+http://iffycan.blogspot.com.ar/2013/05/angular-service-or-factory.html
+	<script> 
+	var module = angular.module("myApp", []);
+	
+	module.service("userService", function(){
+		// we use THIS inside services
+		this.users = ['elon','mozart']; 
+	});
+	
+    </script>
+</body>
+</html>

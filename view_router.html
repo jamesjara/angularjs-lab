@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body > 
+
+	<p><a href = "#showPets">Add Student</a></p>
+	<p><a href = "#showHumans">View Students</a></p>
+	
+    <div type = "text/ng-template" id="showPets" > 
+        {{ pet.name }}
+    </div>
+
+    <div type = "text/ng-template" id="showHumans" > 
+        {{ human.name }}
+    </div>
+    
+    <script>
+    var myApp = angular.module("myApp", ['ngRoute']); //need to declar ngroute
+    
+    // routeProvider is in charge of the hash url 
+    myApp.config(['$routeProvider', function($routeProvider){
+    	$routeProvider.
+        when('/showPets',{
+            controller:'PetController'
+        }).
+        when('/showHumans',{
+            controller:'HumanController'
+        }).otherwise({
+            redirectTo: '/undefined-lol-'
+        });
+    }]);
+    
+    myApp.controller('PetController', function($scope){
+    	$scope.pet = {
+    			name: 'pet'
+    	}
+    });
+    
+    myApp.controller('HumanController', function($scope){
+    	$scope.human = {
+    			name: 'human'
+    	}
+    });
+    </script>
+</body>
+</html>

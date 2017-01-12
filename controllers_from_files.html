@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title> angular js @jamesjara tutorial </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+    var myApp = angular.module("myApp", []);
+</script>
+<script src = "modules/humanController.js"></script>
+<script src = "modules/petController.js"></script>
+</head>
+<body > 
+
+    <div  ng-controller="petController"> 
+        {{ pet.name }}
+    </div>
+
+    <div  ng-controller="humanController"> 
+        {{ human.name }}
+    </div> 
+</body>
+</html>
